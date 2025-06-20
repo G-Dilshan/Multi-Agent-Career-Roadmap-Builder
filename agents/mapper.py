@@ -1,7 +1,7 @@
 import json
 
 def run_mapper(summarized_data: str):
-    lines = summarized_data.split("\n")
+    lines = summarized_data.split("\\n")
     nodes = []
     edges = []
     added_nodes = set()

@@ -7,27 +7,6 @@ def run_summarizer(raw_data: dict):
         return str(value)
     
     combined_text = "\n".join([stringify(v) for v in raw_data.values()])
-    # prompt = f"""
-    # You are an expert career roadmap planner.
-    # When user ask about courses or preparation strategies, recommend specific courses and resources from different platforms like Cousera, edx, Deeplearning.ai, etc.
-    # Breakdown the roadmap into clear phases:
-    # - Phase (e.g. Fundamentals, Specialization)
-    # - Subtopics (e.g. Python, SQL, ML Algorithms)
-    # - Recommended Tools/Concepts
-    # - Estimated time to complete (in weeks or days)
-
-    # Output format (Strictly follow this format):
-    # Phase -> Subtopics -> Recommended Tools/Concepts -> Estimated time to complete
-    # Use arrows only. No colons, No dots or lists.
-    # AI_Engineer -> Data_Scientist (This is the acceptable way)
-
-    # Encourage commitement and clarity with timelines.
-    # Ensure the roadmap is achievable and realistic.
-    # Ensure 12-20 roadmap paths.
-
-    # Context:
-    # {combined_text}
-    # """
     prompt = f"""
 You are an expert career roadmap planner.
 

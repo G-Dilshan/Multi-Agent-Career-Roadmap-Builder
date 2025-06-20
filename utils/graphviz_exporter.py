@@ -2,34 +2,6 @@ import os
 from graphviz import Digraph
 import regex as re
 
-# def sanitize(text):
-#     # clean = str(text).replace('"', "'").replace("\n", " ").strip()
-#     # clean = re.sub(r"[<>\\]", "", clean)
-#     # # return clean[:120] + "..." if len(clean) > 120 else clean
-#     # clean = str(text)
-#     # clean = clean.replace('"', "'")       # Replace double quotes with single
-#     # clean = clean.replace("'", "")        # Remove single quotes entirely (optional)
-#     # clean = clean.replace("\n", " ")      # Replace newlines
-#     # clean = clean.replace("\r", " ")      # Replace carriage returns
-#     # clean = clean.replace("\\", "")       # Remove backslashes
-#     # clean = clean.replace("`", "")        # Remove backticks
-#     # clean = clean.replace('"', '\\"').replace("\n", "\\n")
-#     # clean = clean.replace('.', '_')
-#     # clean = re.sub(r"[<>]", "", clean)    # Remove angle brackets
-
-#     # # Collapse multiple spaces
-#     # clean = re.sub(r"\s+", " ", clean).strip()
-#     # Remove or replace problematic characters
-#     unwanted_patterns = [r'\bn\b', r'content_', r'response_metadata', r'token_usage', r'additional_kwargs']
-    
-#     for pattern in unwanted_patterns:
-#         text = re.sub(pattern, '', text)
-#     text = re.sub(r'[^\w]', '_', text)
-#     # return f'"{text}"'  # Wrap in quotes to be safe
-
-#     # Truncate if too long
-#     return text[:120] + "..." if len(text) > 120 else text
-
 def sanitize(text):
     # Remove unwanted terms
     unwanted_patterns = [r'\bn\b', r'content_', r'response_metadata', r'token_usage', r'additional_kwargs']
